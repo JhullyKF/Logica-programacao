@@ -7,18 +7,12 @@ Write your code in this editor and press "Run" button to compile and execute it.
 *******************************************************************************/
 
 #include <stdio.h>
-#define PI 3.14
+
 int main()
 {
-    float volume, raio, altura;
-    printf("Insira a altura da lata: ");
-    scanf("%f", &altura);
-    
-    printf("Insira o raio: ");
-    scanf("%f", &raio);
-    
-    volume = PI * (raio*raio) * altura;
-    
-    printf("O volume da lata é %.2f", volume);
-    return 0;
+    int c, temperatura;
+    printf("Informe a temperatura em Celsius: ");
+    scanf("%d", &c);
+    temperatura = (9/5) * c + 32;
+    printf("A temperatura em Farenheit é %d", temperatura);
 }

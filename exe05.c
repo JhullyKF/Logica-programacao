@@ -8,20 +8,19 @@ Write your code in this editor and press "Run" button to compile and execute it.
 
 #include <stdio.h>
 
+
 int main()
 {
-    float largura, profundidade, area, potencia;
+    float a, b, c, result;
     
-    printf("Insira a largura do cômodo: ");
-    scanf("%f", &largura);
+    printf("Informe a primeira nota: ");
+    scanf("%f", &a);
+    printf("Informe a segunda nota: ");
+    scanf("%f", &b);
+    printf("Informe a terceira nota: ");
+    scanf("%f", &c);
     
-    printf("Insira a profundidade: ");
-    scanf("%f", &profundidade);
+    result = (a*2 + b*3 + c*5) / 3;
+    printf("A média é %.2f", result);
     
-    area = largura * profundidade;
-    potencia = (largura * profundidade) * 18;
-    
-    printf("Na area de %.2f, é necessário %.2fW de potencia", area, potencia);
-
-    return 0;
 }
