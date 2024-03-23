@@ -8,19 +8,15 @@ Write your code in this editor and press "Run" button to compile and execute it.
 
 #include <stdio.h>
 
+#define TAXA_SERVICO 0.1
+
 int main()
 {
-    char nome;
-    float valorHora, qtdHoras, sal;
+    float conta, taxa, total;
+    printf("Informe o valor da conta: ");
+    scanf("%f", &conta);
     
-    printf("Informe seu nome: ");
-    scanf("%s", &nome);
-    printf("Informe o números de horas trabalhadas: ");
-    scanf("%f", &qtdHoras);
-    printf("Informe valor recebido por horas: ");
-    scanf("%f", &valorHora);
-    
-    sal = valorHora*qtdHoras;
-    printf("O salário é %.2f", sal);
-    
+    taxa = conta * TAXA_SERVICO;
+    total = taxa + conta;
+    printf("O valor da taxa de serviço fica %.2f, total da conta: %.2f", taxa, total);
 }

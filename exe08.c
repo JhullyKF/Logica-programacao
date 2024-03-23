@@ -1,8 +1,7 @@
 /******************************************************************************
-
-                            Online C Compiler.
-                Code, Compile, Run and Debug C program online.
-Write your code in this editor and press "Run" button to compile and execute it.
+Você está endividado e quer administrar melhor sua vida financeira. 
+Para isso, faça um programa que recebe o valor de uma dívida e o juro mensal, 
+então calcule e imprima o valor da dívida no mês seguinte
 
 *******************************************************************************/
 
@@ -10,17 +9,14 @@ Write your code in this editor and press "Run" button to compile and execute it.
 
 int main()
 {
-    const float COMISSAO = 0.15;
-    char nome;
-    float sal, vendas, resultado;
+    float valorDiv, juros, total;
+    printf("Insira o valor da divida: ");
+    scanf("%f", &valorDiv);
     
-    printf("Informe seu nome: ");
-    scanf("%s", &nome);
-    printf("Informe seu salário fixo: ");
-    scanf("%f", &sal);
-    printf("Informe a quantidade de vendas (em dinheiro): ");
-    scanf("%f", &vendas);
+    printf("Insira o valor do juros mensal: ");
+    scanf("%f", &juros);
     
-    resultado = sal + vendas*COMISSAO;
-    printf("Total a receber: %.2f", resultado);
+    total = valorDiv * (1.0+juros/100);
+    printf("O valor da divida no próximo mês é %.2f", total);
+    
 }

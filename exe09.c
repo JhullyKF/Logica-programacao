@@ -1,8 +1,7 @@
 /******************************************************************************
-
-                            Online C Compiler.
-                Code, Compile, Run and Debug C program online.
-Write your code in this editor and press "Run" button to compile and execute it.
+Faça um programa que efetue o cálculo do salário líquido de um professor.
+Os dados fornecidos serão: valor da hora aula, número de aulas dadas no mês e 
+percentualde desconto do INSS.
 
 *******************************************************************************/
 
@@ -10,11 +9,19 @@ Write your code in this editor and press "Run" button to compile and execute it.
 
 int main()
 {
-    const float porcent = 0.10;
-    float valorGasto, gorjeta;
-    printf("Informe o valor gasto: ");
-    scanf("%f", &valorGasto);
+    float valorHora, percentINSS, salBruto, desc;
+    int numAulas;
+    printf("Insira o valor da hora da aula: ");
+    scanf("%f", &valorHora);
     
-    gorjeta = valorGasto * porcent;
-    printf("O valor da gorjeta é: %.2f", gorjeta);
+    printf("Insira o número de aulas: ");
+    scanf("%d", &numAulas);
+    
+    printf("Insira o percentual de desconto do INSS: ");
+    scanf("%f", &percentINSS);
+    
+    desc = (valorHora*numAulas) * (percentINSS/100);
+    salBruto = valorHora*numAulas - desc;
+    printf("O salário bruto é %.2f", salBruto);
+    
 }
