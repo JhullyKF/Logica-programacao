@@ -10,9 +10,11 @@ Write your code in this editor and press "Run" button to compile and execute it.
 
 int main()
 {
-    float x, result;
-    printf("Insira um número: ");
-    scanf("%f", &x);
-    result = x*x;
-    printf("O resultado é %.2f", result);
+    float a, b, c;
+    printf("Insira o valor A: ");
+    scanf("%f", &a);
+    printf("Insira o valor B: ");
+    scanf("%f", &b);
+    c = (a + b) * b;
+    printf("O resultado da equação C=(A+B)*B é igual a %.2f", c);
 }

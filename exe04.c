@@ -8,14 +8,20 @@ Write your code in this editor and press "Run" button to compile and execute it.
 
 #include <stdio.h>
 
-
 int main()
 {
-    const float DOLAR = 4.98;
-    float qtdReais, qtdDolar;
-    printf("Informe a quantidade de Reais: ");
-    scanf("%f", &qtdReais);
-    qtdDolar = qtdReais/DOLAR;
-    printf("Você possui %.2f em dolares", qtdDolar);
+    float valorDevido, total;
+    int atraso, multa;
+    printf("Insira o valor devido: ");
+    scanf("%f", &valorDevido);
     
+    printf("Informe a quantidade de dias em atraso: ");
+    scanf("%d", &atraso);
+    
+    printf("Insira o percentual de multa por dia de atraso: ");
+    scanf("%d", &multa);
+    
+    total = valorDevido + (atraso*(multa/100));
+    
+    printf("O total é %.2f", total);
 }
