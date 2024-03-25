@@ -15,13 +15,13 @@ int main()
     scanf("%f", &preco);
     
     if(preco > 500.00){
-        desconto = preco - (preco * 0.15);
+        desconto = preco * (1 - 0.15);
         printf("Valor com desconto: %.2f", desconto);
     } else if(preco >= 200.00 && preco <= 499.99){
-        desconto = preco - (preco * 0.1);
+        desconto = preco * (1.0 - 0.1);
         printf("Valor com desconto: %.2f", desconto);
     }else{
-        desconto = preco - (preco * 0.05);
+        desconto = preco * (1.0 - 0.05);
         printf("Valor com desconto: %.2f", desconto);
     }
     return 0;
